@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "scripts": {
+    "start": "nodemon src/1-Server/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7"
+  }
+}
