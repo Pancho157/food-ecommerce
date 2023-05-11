@@ -6,6 +6,10 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { engine } from "express-handlebars";
 
+// Routes
+import { clients } from "../2-Routes/clients-routes.js";
+import { admin } from "../2-Routes/admin-routes.js";
+
 let app = express();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -26,6 +30,8 @@ app.set("view engine", ".hbs");
 app.set("views", path.join(__dir, "views"));
 
 // Routes
+app.use("/", clients);
+app.use("/administrator", admin);
 
 // Error 404
 app.use((req, res) => {
