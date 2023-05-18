@@ -38,11 +38,22 @@
   z-index: 100;
 }
 
-.slider--image {
-  width: 100%;
+.slider {
+  overflow: hidden;
   height: 85vh;
+  width: 100%;
+}
+
+.slider--inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  transition: all 500ms;
+}
+
+.slider--image {
+  width: 100vw;
   object-fit: cover;
-  object-position: bottom;
 }
 
 .slider--buttonsCont {
@@ -149,7 +160,7 @@ input::-webkit-inner-spin-button {
 }
 /* Firefox */
 input[type="number"] {
-  -moz-appearance: textfield;
+  --moz-appearance: textfield;
 }
 
 /*--------------------------------------------*/
