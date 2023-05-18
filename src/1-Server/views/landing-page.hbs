@@ -1,41 +1,44 @@
 <div class="main-content">
 
+  <div class="hero">
   {{! Inicio slider }}
-  <div class="slider">
-    <div class="status--tag">
-      <div class="status"></div>
-      <p>Abierto</p>
+    <div class="slider">
+      <div class="status--tag">
+        <div class="status"></div>
+        <p>Abierto</p>
+      </div>
+
+      <div class="hero--brand"></div>
+
+      <div class="slider--inner">
+        <img
+          src="https://i.blogs.es/58e525/como-hacer-masa-para-empanadas-fritas-1-/1366_2000.jpg"
+          alt="Empanadas"
+          class="slider--image"
+        />
+        <img
+          src="https://wallpapers.com/images/hd/food-photography-pepperoni-and-cheese-pizza-gargkp2d037d4zrh.jpg"
+          alt="Pizza"
+          class="slider--image"
+        />
+        <img
+          src="https://www.recetasnatura.com.ar/sites/default/files/bombas_de_papas_y_champignones_al_verdeo_con_ensalada_y_aderezo_alimonado.jpg"
+          alt="Empanadas"
+          class="slider--image"
+        />
+      </div>
+
+      <div class="slider--buttonsCont">
+        <div class="slider--button slider--button__active"></div>
+        <div class="slider--button"></div>
+        <div class="slider--button"></div>
+      </div>
+
     </div>
 
-    <div class="hero--brand"></div>
-
-    <div class="slider--inner">
-      <img
-        src="https://i.blogs.es/58e525/como-hacer-masa-para-empanadas-fritas-1-/1366_2000.jpg"
-        alt="Empanadas"
-        class="slider--image"
-      />
-      <img
-        src="https://wallpapers.com/images/hd/food-photography-pepperoni-and-cheese-pizza-gargkp2d037d4zrh.jpg"
-        alt="Pizza"
-        class="slider--image"
-      />
-      <img
-        src="https://www.recetasnatura.com.ar/sites/default/files/bombas_de_papas_y_champignones_al_verdeo_con_ensalada_y_aderezo_alimonado.jpg"
-        alt="Empanadas"
-        class="slider--image"
-      />
-    </div>
-
-    <div class="slider--buttonsCont">
-      <button type="button" class="slider--button slider--button__active"></button>
-      <button type="button" class="slider--button"></button>
-      <button type="button" class="slider--button"></button>
-    </div>
+    <p class="down-arrow">&darr;</p>
 
   </div>
-
-  <p class="down-arrow">&darr;</p>
 
   {{! Fin slider }}
 
@@ -55,9 +58,9 @@
             <p>(Carne, aceituna, cebolla, morrón)</p>
           </div>
           <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
+            <button type="button" class="counter--plus" onclick="add(0)">+</button>
             <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
+            <button type="button" class="counter--less" onclick="removeOne(0)">-</button>
           </div>
         </div>
         <div class="menu--item">
