@@ -21,6 +21,12 @@
   row-gap: 20px;
 }
 
+.main--content form h2 {
+  font-family: italianno;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
 .form--input {
   width: 100%;
   display: flex;
@@ -44,5 +50,5 @@
 }
 
 .form--submit:hover {
-    box-shadow: inset -2px -3px 2px var(--buy-button);
+  box-shadow: inset -2px -3px 2px var(--buy-button);
 }
