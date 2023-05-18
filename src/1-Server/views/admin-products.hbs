@@ -1,0 +1,103 @@
+<div class="main--content">
+
+  {{! Inicio header }}
+  <header class="header">
+    <h1>Nombre de la página</h1>
+    <nav>
+      <ul>
+        <a href="#">
+          <li class="nav--item">Ingredientes</li>
+        </a>
+        <a href="#">
+          <li class="nav--item nav--item__active">Productos</li>
+        </a>
+        <a href="#">
+          <li class="nav--item">Estadísticas</li>
+        </a>
+      </ul>
+    </nav>
+  </header>
+
+  {{! Final header }}
+
+  {{! Inicio Tabla de Empanadas }}
+
+  <div class="table--container">
+    <h2>Empanadas</h2>
+    <table>
+      <tr>
+        <th>Producto</th>
+        <th>Descripción</th>
+        <th>Stock</th>
+        <th>Precio</th>
+        <th>Opciones</th>
+      </tr>
+      <tr>
+        <td>Empanada de carne</td>
+        <td>Descripción random para el producto</td>
+        <td>
+          <button class="addStock">+</button>
+          <input type="number" name="" id="" value="0" />
+          <button class="removeStock">-</button>
+        </td>
+        <td>$ 1.200</td>
+        <td><button type="button">...</button><td>
+      </tr>
+    </table>
+  </div>
+
+    <div class="table--container">
+    <h2>Pizzas</h2>
+    <table>
+      <tr>
+        <th>Producto</th>
+        <th>Descripción</th>
+        <th>Stock</th>
+        <th>Precio</th>
+        <th>Opciones</th>
+      </tr>
+      <tr>
+        <td>Empanada de carne</td>
+        <td>Descripción random para el producto</td>
+        <td>
+          <button class="addStock">+</button>
+          <input type="number" name="" id="" value="0" />
+          <button class="removeStock">-</button>
+        </td>
+        <td>$ 1.200</td>
+        <td><button type="button">...</button><td>
+      </tr>
+    </table>
+  </div>
+
+    <div class="table--container">
+    <h2>Snacks y gaseosas</h2>
+    <table>
+      <tr>
+        <th>Producto</th>
+        <th>Descripción</th>
+        <th>Stock</th>
+        <th>Precio</th>
+        <th>Opciones</th>
+      </tr>
+      <tr>
+        <td>Empanada de carne</td>
+        <td>Descripción random para el producto</td>
+        <td>
+          <button class="addStock">+</button>
+          <input type="number" name="" id="" value="0" />
+          <button class="removeStock">-</button>
+        </td>
+        <td>$ 1.200</td>
+        <td><button type="button">...</button><td>
+      </tr>
+    </table>
+  </div>
+
+  {{! Fin Tabla de Empanadas }}
+
+</div>
+
+{{! Styles }}
+<link rel="stylesheet" href="/styles/admin-header.css" />
+<link rel="stylesheet" href="/styles/admin-products.css" />
