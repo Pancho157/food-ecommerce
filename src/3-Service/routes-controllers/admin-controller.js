@@ -11,6 +11,10 @@ export class AdminRoutesController {
     res.render("admin-login", { layout: "admin" });
   }
 
+  getIngredientsPage(req, res) {
+    res.render("admin-ingredients", { layout: "admin" });
+  }
+
   getProductsPage(req, res) {
     res.render("admin-products", { layout: "admin" });
   }

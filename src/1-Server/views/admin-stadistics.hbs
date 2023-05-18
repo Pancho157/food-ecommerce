@@ -1,0 +1,101 @@
+<div class="main--content">
+
+  {{! Inicio header }}
+  <header class="header">
+    <h1>Nombre de la página</h1>
+    <nav>
+      <ul>
+        <a href="#">
+          <li class="nav--item">Ingredientes</li>
+        </a>
+        <a href="#">
+          <li class="nav--item">Productos</li>
+        </a>
+        <a href="#">
+          <li class="nav--item nav--item__active">Estadísticas</li>
+        </a>
+      </ul>
+    </nav>
+  </header>
+
+  {{! Final header }}
+
+  {{! Inicio grafico }}
+
+  <div class="graph--mainContainer">
+
+    <div class="graph--header">
+
+      <h2>Dinero en ventas</h2>
+
+      <div class="interval--selector">
+        <button type="button">Último año</button>
+        <button type="button">Último mes</button>
+        <button type="button" class="active">Última semana</button>
+      </div>
+
+    </div>
+
+    <div class="graph--contaner">
+
+    </div>
+
+  </div>
+
+  {{! Final gráfico }}
+
+  {{! Inicio tabla }}
+
+  <div class="table--container">
+
+    <div class="table--header">
+      <h2>Productos más vendidos</h2>
+
+      <div class="interval--selector">
+        <button type="button">Último año</button>
+        <button type="button">Último mes</button>
+        <button type="button" class="active">Última semana</button>
+      </div>
+    </div>
+
+    <table>
+      <tr>
+        <th>Producto</th>
+        <th>Categoría</th>
+        <th>Cantidad vendida</th>
+        <th>Total en ventas</th>
+      </tr>
+      <tr>
+        <td>Empanada de carne</td>
+        <td>Empanadas</td>
+        <td>36</td>
+        <td>$ 38.000</td>
+      </tr>
+      <tr>
+        <td>Empanada de carne</td>
+        <td>Empanadas</td>
+        <td>36</td>
+        <td>$ 38.000</td>
+      </tr>
+      <tr>
+        <td>Empanada de carne</td>
+        <td>Empanadas</td>
+        <td>36</td>
+        <td>$ 38.000</td>
+      </tr>
+      <tr>
+        <td>Empanada de carne</td>
+        <td>Empanadas</td>
+        <td>36</td>
+        <td>$ 38.000</td>
+      </tr>
+    </table>
+  </div>
+
+  {{! Final Tabla }}
+
+</div>
+
+{{! Styles }}
+<link rel="stylesheet" href="/styles/admin-header.css" />
+<link rel="stylesheet" href="/styles/admin-stadistics.css" />
