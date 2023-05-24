@@ -24,10 +24,12 @@ function verifyAndRenderShopStatus() {
 
   renderShopStatusOnStatusTag("closed");
 
+  console.log(date);
+
   //if open, replaces closed tag
-  if (day != 1) {
-    if (shopOpenHour <= hours <= 00 || 00 <= hours <= shopClosingHour) {
-      if (shopClosingHour - hours <= 1) {
+  if (day != 2) {
+    if (shopOpenHour <= hours || hours <= shopClosingHour) {
+      if (hours <= shopClosingHour) {
         renderShopStatusOnStatusTag("closing soon");
       } else {
         renderShopStatusOnStatusTag("open");
