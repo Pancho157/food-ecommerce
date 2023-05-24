@@ -1,6 +1,8 @@
 import dotenv from "dotenv";
 dotenv.config();
 
+import logger  from "../../logger/log4js-config.js";
+
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -17,7 +19,7 @@ const __dir = path.dirname(__filename);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-  console.log(`Server online - port ${PORT}`);
+  logger.info(`Server online - port ${PORT}`);
 });
 
 app.use(express.json());

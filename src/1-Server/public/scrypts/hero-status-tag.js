@@ -24,8 +24,6 @@ function verifyAndRenderShopStatus() {
 
   renderShopStatusOnStatusTag("closed");
 
-  console.log(date);
-
   //if open, replaces closed tag
   if (day != 2) {
     if (shopOpenHour <= hours || hours <= shopClosingHour) {
