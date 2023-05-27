@@ -1,9 +1,9 @@
-let elementCounter = document.querySelectorAll(".counter");
-
-function add(index) {
-  elementCounter[index].value++;
+function add(id) {
+  const input = document.querySelector(`[data-prodID="${id}"]`);
+  input.value++;
 }
 
-function removeOne(index) {
-  elementCounter[index].value--;
+function removeOne(id) {
+  const input = document.querySelector(`[data-prodID="${id}"]`);
+  input.value--;
 }

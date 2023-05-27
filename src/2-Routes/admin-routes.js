@@ -11,6 +11,6 @@ admin.get("/products", adminController.getProductsPage);
 
 admin.get("/stadistics", adminController.getStadisticsPage);
 
-admin.get("/", adminController.getProductInfo);
+admin.get("/:id", adminController.getProductInfo);
 
 export { admin };

@@ -52,210 +52,44 @@
       />
       <div class="menu">
         <h2 class="menu--title">Empanadas</h2>
-        <div class="menu--item">
+
+        {{#each empanadas}}
+          <div class="menu--item">
           <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
+            <p><span>{{name}}</span></p>
+            <p>({{detail}})</p>
           </div>
           <div class="item--counter">
-            <button type="button" class="counter--plus" onclick="add(0)">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less" onclick="removeOne(0)">-</button>
+            <button type="button" class="counter--plus" onclick="add({{id}})">+</button>
+            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1" data-prodID="{{id}}"/>
+            <button type="button" class="counter--less" onclick="removeOne({{id}})">-</button>
           </div>
         </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
+        {{/each}}   
+
       </div>
     </div>
+
     <div class="menu--section">
       <div class="menu">
         <h2 class="menu--title">Pizzas</h2>
-        <div class="menu--item">
+
+        {{#each pizzas}}
+          <div class="menu--item">
           <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
+            <p><span>{{name}}</span></p>
+            <p>({{detail}})</p>
           </div>
           <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
+            <button type="button" class="counter--plus" onclick="add({{id}})">+</button>
+            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1" data-prodID="{{id}}"/>
+            <button type="button" class="counter--less" onclick="removeOne({{id}})">-</button>
           </div>
         </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
+        {{/each}}   
+
       </div>
+
       <img
         src="https://media.istockphoto.com/id/521954007/es/foto/pollo-relleno-de-empanadas-casera.jpg?s=612x612&w=0&k=20&c=QPCkMlIwKatscw6tpnsMQVD9-lx7wOpxmZqpzWK3vkQ="
         alt="Imagen de empanadas"
@@ -268,105 +102,21 @@
       />
       <div class="menu">
         <h2 class="menu--title">Snacks y Gaseosas</h2>
-        <div class="menu--item">
+        
+        {{#each snacks}}
+          <div class="menu--item">
           <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
+            <p><span>{{name}}</span></p>
+            <p>({{detail}})</p>
           </div>
           <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
+            <button type="button" class="counter--plus" onclick="add({{id}})">+</button>
+            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1" data-prodID="{{id}}"/>
+            <button type="button" class="counter--less" onclick="removeOne({{id}})">-</button>
           </div>
         </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
-        <div class="menu--item">
-          <div class="item">
-            <p><span>Carne</span></p>
-            <p>(Carne, aceituna, cebolla, morrón)</p>
-          </div>
-          <div class="item--counter">
-            <button type="button" class="counter--plus">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1"/>
-            <button type="button" class="counter--less">-</button>
-          </div>
-        </div>
+        {{/each}}  
+
       </div>
     </div>
 
