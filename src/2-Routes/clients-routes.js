@@ -5,4 +5,6 @@ const clients = Router();
 
 clients.get("/", clientsController.getLandingPage);
 
+clients.post("/", clientsController.postPurchase);
+
 export { clients };

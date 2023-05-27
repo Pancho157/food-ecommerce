@@ -4,18 +4,18 @@ class ClientsRoutesController {
   }
 
   //   GET
-  getLandingPage(reqq, res) {
+  getLandingPage(req, res) {
     const products = {
       empanadas: [
         { name: "Carne", detail: "Carne, aceituna, cebolla, morrón", id: 1 },
-        { name: "Carne", detail: "Carne, aceituna, cebolla, morrón", id: 2 },
-        { name: "Carne", detail: "Carne, aceituna, cebolla, morrón", id: 3 },
-        { name: "Carne", detail: "Carne, aceituna, cebolla, morrón", id: 4 },
-        { name: "Carne", detail: "Carne, aceituna, cebolla, morrón", id: 5 },
-        { name: "Carne", detail: "Carne, aceituna, cebolla, morrón", id: 6 },
-        { name: "Carne", detail: "Carne, aceituna, cebolla, morrón", id: 7 },
-        { name: "Carne", detail: "Carne, aceituna, cebolla, morrón", id: 8 },
-        { name: "Carne", detail: "Carne, aceituna, cebolla, morrón", id: 9 },
+        { name: "Carn", detail: "Carne, aceituna, cebolla, morrón", id: 2 },
+        { name: "Carneee", detail: "Carne, aceituna, cebolla, morrón", id: 3 },
+        { name: "Carneasd", detail: "Carne, aceituna, cebolla, morrón", id: 4 },
+        { name: "Carner", detail: "Carne, aceituna, cebolla, morrón", id: 5 },
+        { name: "Carnet", detail: "Carne, aceituna, cebolla, morrón", id: 6 },
+        { name: "Fernet", detail: "Carne, aceituna, cebolla, morrón", id: 7 },
+        { name: "Jeje", detail: "Carne, aceituna, cebolla, morrón", id: 8 },
+        { name: "Jo jo", detail: "Carne, aceituna, cebolla, morrón", id: 9 },
       ],
       pizzas: [
         { name: "Carne", detail: "Carne, aceituna, cebolla, morrón", id: 10 },
@@ -44,7 +44,9 @@ class ClientsRoutesController {
   }
 
   //   POST
-  postPurchase() {}
+  postPurchase(req, res) {
+    console.log(req.body);
+  }
 }
 
 export default new ClientsRoutesController();

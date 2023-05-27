@@ -26,10 +26,10 @@ export class AdminRoutesController {
   getProductInfo(req, res) {}
 
   //   POST
-  postLogin() {}
+  postLogin(req, res) {}
 
   //   PUT
-  putProduct() {}
+  putProduct(req, res) {}
 }
 
 export default new AdminRoutesController();

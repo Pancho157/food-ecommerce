@@ -44,7 +44,7 @@
 
   {{! Inicio menus }}
 
-  <form class="menu--container" action="#" method="post">
+  <form class="menu--container" action="/" method="post">
     <div class="menu--section">
       <img
         src="https://media.istockphoto.com/id/521954007/es/foto/pollo-relleno-de-empanadas-casera.jpg?s=612x612&w=0&k=20&c=QPCkMlIwKatscw6tpnsMQVD9-lx7wOpxmZqpzWK3vkQ="
@@ -61,7 +61,7 @@
           </div>
           <div class="item--counter">
             <button type="button" class="counter--plus" onclick="add({{id}})">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1" data-prodID="{{id}}"/>
+            <input type="number" name="empanada-{{name}}" class="counter" min="0" value="0" step="1" data-prodID="{{id}}"/>
             <button type="button" class="counter--less" onclick="removeOne({{id}})">-</button>
           </div>
         </div>
@@ -82,7 +82,7 @@
           </div>
           <div class="item--counter">
             <button type="button" class="counter--plus" onclick="add({{id}})">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1" data-prodID="{{id}}"/>
+            <input type="number" name="pizza-{{name}}" class="counter" min="0" value="0" step="1" data-prodID="{{id}}"/>
             <button type="button" class="counter--less" onclick="removeOne({{id}})">-</button>
           </div>
         </div>
@@ -111,7 +111,7 @@
           </div>
           <div class="item--counter">
             <button type="button" class="counter--plus" onclick="add({{id}})">+</button>
-            <input type="number" name="empanada-1" class="counter" min="0" value="0" step="1" data-prodID="{{id}}"/>
+            <input type="number" name="snack-{{name}}" class="counter" min="0" value="0" step="1" data-prodID="{{id}}"/>
             <button type="button" class="counter--less" onclick="removeOne({{id}})">-</button>
           </div>
         </div>

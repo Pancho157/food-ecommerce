@@ -12,6 +12,10 @@ export default class DAO {
         this.products = new ProductsMongoAtlas();
     }
 
-    DAO.instance = this;
+    if (DAO.instance) {
+      return DAO.instance;
+    } else {
+      DAO.instance = this;
+    }
   }
 }
