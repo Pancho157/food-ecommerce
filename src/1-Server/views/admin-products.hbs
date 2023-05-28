@@ -5,13 +5,13 @@
     <h1>Nombre de la página</h1>
     <nav>
       <ul>
-        <a href="#">
+        <a href="/administrator/ingredients">
           <li class="nav--item">Ingredientes</li>
         </a>
-        <a href="#">
+        <a href="/administrator/products">
           <li class="nav--item nav--item__active">Productos</li>
         </a>
-        <a href="#">
+        <a href="/administrator/stadistics">
           <li class="nav--item">Estadísticas</li>
         </a>
       </ul>
@@ -41,12 +41,22 @@
           <button class="removeStock">-</button>
         </td>
         <td>$ 1.200</td>
-        <td><button type="button">...</button><td>
+        <td>
+          <button type="button"><ion-icon
+              name="alert-circle-outline"
+            ></ion-icon></button>
+          <button type="button"><ion-icon
+              name="build-outline"
+            ></ion-icon></button>
+          <button type="button" class="removeStock"><ion-icon
+              name="trash-outline"
+            ></ion-icon></button>
+        </td>
       </tr>
     </table>
   </div>
 
-    <div class="table--container">
+  <div class="table--container">
     <h2>Pizzas</h2>
     <table>
       <tr>
@@ -65,12 +75,22 @@
           <button class="removeStock">-</button>
         </td>
         <td>$ 1.200</td>
-        <td><button type="button">...</button><td>
+        <td>
+          <button type="button"><ion-icon
+              name="alert-circle-outline"
+            ></ion-icon></button>
+          <button type="button"><ion-icon
+              name="build-outline"
+            ></ion-icon></button>
+          <button type="button" class="removeStock"><ion-icon
+              name="trash-outline"
+            ></ion-icon></button>
+        </td>
       </tr>
     </table>
   </div>
 
-    <div class="table--container">
+  <div class="table--container">
     <h2>Snacks y gaseosas</h2>
     <table>
       <tr>
@@ -89,9 +109,29 @@
           <button class="removeStock">-</button>
         </td>
         <td>$ 1.200</td>
-        <td><button type="button">...</button><td>
+        <td>
+          <button type="button"><ion-icon
+              name="alert-circle-outline"
+            ></ion-icon></button>
+          <button type="button"><ion-icon
+              name="build-outline"
+            ></ion-icon></button>
+          <button type="button" class="removeStock"><ion-icon
+              name="trash-outline"
+            ></ion-icon></button>
+        </td>
       </tr>
     </table>
+
+    <div onclick="closeModal()" class="modal--container">
+      <div class="modal">
+        <ion-icon
+          onclick="closeModal()"
+          class="close--modal"
+          name="close-circle-outline"
+        ></ion-icon>
+      </div>
+    </div>
   </div>
 
   {{! Fin Tabla de Empanadas }}
@@ -101,3 +141,14 @@
 {{! Styles }}
 <link rel="stylesheet" href="/styles/admin-header.css" />
 <link rel="stylesheet" href="/styles/admin-products.css" />
+
+<script src="/scrypts/open-close-modal.js"></script>
+
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
