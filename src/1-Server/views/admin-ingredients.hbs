@@ -1,3 +1,9 @@
+{{! Styles }}
+<link rel="stylesheet" href="/styles/admin-header.css" />
+<link rel="stylesheet" href="/styles/admin-ingredients.css" />
+<link rel="stylesheet" href="/styles/modal.css" />
+{{! Fin Styles }}
+
 <div class="main--content">
 
   {{! Inicio header }}
@@ -41,12 +47,22 @@
           <button class="removeStock">-</button>
         </td>
         <td>$ 1.200</td>
-        <td><button type="button">...</button><td>
+        <td>
+          <button type="button">
+            <ion-icon name="alert-circle-outline"></ion-icon>
+          </button>
+          <button type="button">
+            <ion-icon name="build-outline"></ion-icon>
+          </button>
+          <button type="button" class="removeStock">
+            <ion-icon name="trash-outline"></ion-icon>
+          </button>
+        </td>
       </tr>
     </table>
   </div>
 
-    <div class="table--container">
+  <div class="table--container">
     <h2>Pizzas</h2>
     <table>
       <tr>
@@ -65,12 +81,22 @@
           <button class="removeStock">-</button>
         </td>
         <td>$ 1.200</td>
-        <td><button type="button">...</button><td>
+        <td>
+          <button type="button">
+            <ion-icon name="alert-circle-outline"></ion-icon>
+          </button>
+          <button type="button">
+            <ion-icon name="build-outline"></ion-icon>
+          </button>
+          <button type="button" class="removeStock">
+            <ion-icon name="trash-outline"></ion-icon>
+          </button>
+        </td>
       </tr>
     </table>
   </div>
 
-    <div class="table--container">
+  <div class="table--container">
     <h2>Snacks y gaseosas</h2>
     <table>
       <tr>
@@ -89,15 +115,44 @@
           <button class="removeStock">-</button>
         </td>
         <td>$ 1.200</td>
-        <td><button type="button">...</button><td>
+        <td>
+          <button type="button">
+            <ion-icon name="alert-circle-outline"></ion-icon>
+          </button>
+          <button type="button">
+            <ion-icon name="build-outline"></ion-icon>
+          </button>
+          <button type="button" class="removeStock">
+            <ion-icon name="trash-outline"></ion-icon>
+          </button>
+        </td>
       </tr>
     </table>
   </div>
 
   {{! Fin Tabla de Empanadas }}
 
+  <div onclick="closeModal()" class="modal--container hidden">
+    <div class="modal">
+      <ion-icon
+        onclick="closeModal()"
+        class="close--modal"
+        name="close-circle-outline"
+      ></ion-icon>
+    </div>
+  </div>
+
 </div>
 
-{{! Styles }}
-<link rel="stylesheet" href="/styles/admin-header.css" />
-<link rel="stylesheet" href="/styles/admin-ingredients.css" />
+{{! Scrypts }}
+
+<script src="/scrypts/open-close-modal.js"></script>
+
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
