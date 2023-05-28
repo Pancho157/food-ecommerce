@@ -1,6 +1,7 @@
 {{! Styles }}
 <link rel="stylesheet" href="/styles/admin-header.css" />
 <link rel="stylesheet" href="/styles/admin-stadistics.css" />
+<link rel="stylesheet" href="/styles/tables.css" />
 {{! Fin Styles }}
 
 <div class="main--content">
@@ -54,7 +55,7 @@
   <div class="table--container">
 
     <div class="table--header">
-      <h2>Productos más vendidos</h2>
+      <h2>Ventas</h2>
 
       <div class="interval--selector">
         <button type="button">Último año</button>
@@ -63,36 +64,43 @@
       </div>
     </div>
 
-    <table>
+    <table class="table-sortable">
+      <thead>
+        <tr>
+          <th>Categoría</th>
+          <th>Producto</th>
+          <th>Cantidad vendida</th>
+          <th>Total en ventas (Precio * Cantidad)</th>
+          <th class="th-sort-asc">Ganancias (Total - Insumos)</th>
+        </tr>
+      </thead>
       <tr>
-        <th>Producto</th>
-        <th>Categoría</th>
-        <th>Cantidad vendida</th>
-        <th>Total en ventas</th>
+        <td>Pizzas</td>
+        <td>Napolitana</td>
+        <td>23</td>
+        <td>$ 38.000</td>
+        <td>$ 30.000</td>
       </tr>
       <tr>
-        <td>Empanada de carne</td>
-        <td>Empanadas</td>
-        <td>36</td>
-        <td>$ 38.000</td>
+        <td>Pizzas</td>
+        <td>Muzzarella</td>
+        <td>17</td>
+        <td>$ 35.000</td>
+        <td>$ 22.000</td>
       </tr>
       <tr>
-        <td>Empanada de carne</td>
         <td>Empanadas</td>
-        <td>36</td>
-        <td>$ 38.000</td>
+        <td>Jamón y Queso</td>
+        <td>24</td>
+        <td>$ 20.000</td>
+        <td>$ 18.000</td>
       </tr>
       <tr>
-        <td>Empanada de carne</td>
         <td>Empanadas</td>
+        <td>Carne</td>
         <td>36</td>
-        <td>$ 38.000</td>
-      </tr>
-      <tr>
-        <td>Empanada de carne</td>
-        <td>Empanadas</td>
-        <td>36</td>
-        <td>$ 38.000</td>
+        <td>$ 34.000</td>
+        <td>$ 22.000</td>
       </tr>
     </table>
   </div>
@@ -100,3 +108,6 @@
   {{! Final Tabla }}
 
 </div>
+
+{{! Scrypts }}
+<script src="/scrypts/table-sort.js"></script>

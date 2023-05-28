@@ -1,0 +1,62 @@
+.table--container {
+  width: 90%;
+  margin: 50px 5%;
+}
+
+.table--header {
+  width: 100%;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table--header .interval--selector button.active {
+  border-radius: 8px;
+}
+
+.table--header .interval--selector button {
+  border-radius: 8px;
+}
+
+.table--container table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+}
+
+.table--container table tr {
+  height: 40px;
+  text-align: center;
+}
+
+.table--container table tr:nth-child(odd) {
+  background-color: var(--primary-color);
+}
+
+.table--container table tr td:first-of-type {
+  text-align: left;
+  padding-left: 24px;
+}
+
+.table-sortable th {
+  cursor: pointer;
+}
+
+.table-sortable .th-sort-asc::after {
+  content: "▴";
+}
+
+.table-sortable .th-sort-desc::after {
+  content: "▾";
+}
+
+.table-sortable .th-sort-asc::after,
+.table-sortable .th-sort-desc::after {
+  margin-left: 5px;
+}
+
+.table-sortable .th-sort-asc,
+.table-sortable .th-sort-desc {
+  background: rgba(228, 228, 228, 0.1);
+}

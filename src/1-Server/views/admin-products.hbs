@@ -1,6 +1,7 @@
 {{! Styles }}
 <link rel="stylesheet" href="/styles/admin-header.css" />
 <link rel="stylesheet" href="/styles/admin-products.css" />
+<link rel="stylesheet" href="/styles/tables.css" />
 <link rel="stylesheet" href="/styles/modal.css" />
 {{! Fin Styles }}
 
@@ -30,14 +31,16 @@
 
   <div class="table--container">
     <h2>Empanadas</h2>
-    <table>
-      <tr>
-        <th>Producto</th>
-        <th>Descripción</th>
-        <th>Stock</th>
-        <th>Precio</th>
-        <th>Opciones</th>
-      </tr>
+    <table class="table-sortable">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Descripción</th>
+          <th>Stock</th>
+          <th class="th-sort-asc">Precio</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
       <tr>
         <td>Empanada de carne</td>
         <td>Descripción random para el producto</td>
@@ -64,14 +67,16 @@
 
   <div class="table--container">
     <h2>Pizzas</h2>
-    <table>
-      <tr>
-        <th>Producto</th>
-        <th>Descripción</th>
-        <th>Stock</th>
-        <th>Precio</th>
-        <th>Opciones</th>
-      </tr>
+    <table class="table-sortable">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Descripción</th>
+          <th>Stock</th>
+          <th class="th-sort-asc">Precio</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
       <tr>
         <td>Empanada de carne</td>
         <td>Descripción random para el producto</td>
@@ -98,14 +103,16 @@
 
   <div class="table--container">
     <h2>Snacks y gaseosas</h2>
-    <table>
-      <tr>
-        <th>Producto</th>
-        <th>Descripción</th>
-        <th>Stock</th>
-        <th>Precio</th>
-        <th>Opciones</th>
-      </tr>
+    <table class="table-sortable">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Descripción</th>
+          <th>Stock</th>
+          <th class="th-sort-asc">Precio</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
       <tr>
         <td>Empanada de carne</td>
         <td>Descripción random para el producto</td>
@@ -146,6 +153,7 @@
 
 {{! Scrypts }}
 
+<script src="/scrypts/table-sort.js"></script>
 <script src="/scrypts/open-close-modal.js"></script>
 
 <script

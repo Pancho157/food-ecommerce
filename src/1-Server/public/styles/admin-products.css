@@ -13,30 +13,10 @@ input[type="number"] {
 
 /*--------------------------------------------*/
 
-.table--container {
-  width: 90%;
-  margin: 50px 5%;
-}
-
 .table--container h2 {
   font-family: italianno;
   font-size: 40px;
   margin-bottom: 20px;
-}
-
-table {
-  color: #fff;
-  width: 100%;
-  text-align: center;
-}
-
-table tr {
-  height: 40px;
-  text-align: center;
-}
-
-table tr:nth-child(odd) {
-  background-color: var(--primary-color);
 }
 
 table tr td input {
