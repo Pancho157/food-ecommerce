@@ -4,14 +4,20 @@ function sortTableByColumn(table, column, asc = true) {
   const rows = Array.from(tBody.querySelectorAll("tr"));
 
   const sortedRows = rows.sort((a, b) => {
-    const aColText = a
+    const aRowText = a
       .querySelector(`td:nth-child(${column + 1})`)
       .textContent.trim();
-    const bColText = b
+    const bRowText = b
       .querySelector(`td:nth-child(${column + 1})`)
       .textContent.trim();
 
-    return aColText > bColText ? 1 * dirModifier : -1 * dirModifier;
+    if (isNaN(aRowText)) {
+      return aRowText > bRowText ? 1 * dirModifier : -1 * dirModifier;
+    } else {
+      return parseInt(aRowText) - parseInt(bRowText) > 0
+        ? -1 * dirModifier
+        : 1 * dirModifier;
+    }
   });
 
   while (tBody.firstChild) {
