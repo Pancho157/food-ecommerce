@@ -34,3 +34,58 @@
   position: relative;
   left: calc(100% - 32px);
 }
+
+/* Modal tables */
+
+.modal__table {
+  margin: 0 20px;
+  color: #fff;
+}
+
+.modal__table,
+.modal__table tr,
+.modal__table td,
+.modal__table th {
+  border-collapse: collapse;
+  border: 1px solid #fff;
+}
+
+.modal__table td:nth-of-type(3) {
+  text-align: center;
+}
+
+/* info modal */
+
+.modal__property {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__property input {
+  color: #fff;
+  padding: 0px 10px;
+}
+
+.modal h3:last-of-type {
+  margin-top: 30px;
+}
+
+/* Modify ingredient modal */
+.modal .modal__submit {
+  padding: 4px 16px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  background-color: var(--buy-button);
+  cursor: pointer;
+
+  float: right;
+  margin-right: 20px;
+  margin-top: 20px;
+  transition: all 300ms;
+}
+
+.modal .modal__submit:hover {
+  box-shadow: -2px -2px #fff inset;
+  color: #fff;
+}

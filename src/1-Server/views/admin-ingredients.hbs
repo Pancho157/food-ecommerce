@@ -52,13 +52,20 @@
         </td>
         <td class="price">1600</td>
         <td>
-          <button type="button">
+          <button type="button" onclick="displayInfoModal(1)">
             <ion-icon name="alert-circle-outline"></ion-icon>
           </button>
-          <button type="button">
+          <button
+            type="button"
+            onclick="displayChangeIngredientPropertiesModal(1)"
+          >
             <ion-icon name="build-outline"></ion-icon>
           </button>
-          <button type="button" class="removeStock">
+          <button
+            type="button"
+            class="removeStock"
+            onclick="displayDeleteIngredientModal(1)"
+          >
             <ion-icon name="trash-outline"></ion-icon>
           </button>
         </td>
@@ -75,13 +82,20 @@
         </td>
         <td class="price">300</td>
         <td>
-          <button type="button">
+          <button type="button" onclick="displayInfoModal(2)">
             <ion-icon name="alert-circle-outline"></ion-icon>
           </button>
-          <button type="button">
+          <button
+            type="button"
+            onclick="displayChangeIngredientPropertiesModal(2)"
+          >
             <ion-icon name="build-outline"></ion-icon>
           </button>
-          <button type="button" class="removeStock">
+          <button
+            type="button"
+            class="removeStock"
+            onclick="displayDeleteIngredientModal(2)"
+          >
             <ion-icon name="trash-outline"></ion-icon>
           </button>
         </td>
@@ -98,13 +112,20 @@
         </td>
         <td class="price">200</td>
         <td>
-          <button type="button">
+          <button type="button" onclick="displayInfoModal(3)">
             <ion-icon name="alert-circle-outline"></ion-icon>
           </button>
-          <button type="button">
+          <button
+            type="button"
+            onclick="displayChangeIngredientPropertiesModal(3)"
+          >
             <ion-icon name="build-outline"></ion-icon>
           </button>
-          <button type="button" class="removeStock">
+          <button
+            type="button"
+            class="removeStock"
+            onclick="displayDeleteIngredientModal(3)"
+          >
             <ion-icon name="trash-outline"></ion-icon>
           </button>
         </td>
@@ -121,13 +142,20 @@
         </td>
         <td class="price">150</td>
         <td>
-          <button type="button">
+          <button type="button" onclick="displayInfoModal(4)">
             <ion-icon name="alert-circle-outline"></ion-icon>
           </button>
-          <button type="button">
+          <button
+            type="button"
+            onclick="displayChangeIngredientPropertiesModal(4)"
+          >
             <ion-icon name="build-outline"></ion-icon>
           </button>
-          <button type="button" class="removeStock">
+          <button
+            type="button"
+            class="removeStock"
+            onclick="displayDeleteIngredientModal(4)"
+          >
             <ion-icon name="trash-outline"></ion-icon>
           </button>
         </td>
@@ -140,13 +168,7 @@
   {{! Fin Tabla de Empanadas }}
 
   <div onclick="closeModal()" class="modal--container hidden">
-    <div class="modal">
-      <ion-icon
-        onclick="closeModal()"
-        class="close--modal"
-        name="close-circle-outline"
-      ></ion-icon>
-    </div>
+    <div class="modal"></div>
   </div>
 
 </div>
@@ -155,6 +177,7 @@
 
 <script src="/scrypts/table-sort.js"></script>
 <script src="/scrypts/open-close-modal.js"></script>
+<script src="/scrypts/modal-info.js"></script>
 
 <script
   type="module"
