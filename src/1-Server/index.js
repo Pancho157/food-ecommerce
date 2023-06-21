@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-import logger  from "../../logger/log4js-config.js";
+import logger from "../../logger/log4js-config.js";
 
 import express from "express";
 import path from "path";
