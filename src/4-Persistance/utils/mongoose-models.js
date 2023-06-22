@@ -24,3 +24,17 @@ export const ingredientModel = mongoose.model(
     stockUnit: String,
   })
 );
+
+export const salesModel = mongoose.model(
+  "sales",
+  new Schema({
+    purchase: [
+      {
+        product: { type: ObjectId, ref: "products" },
+        price: Number, // at the time of purchase
+        quantity: Number,
+      },
+    ],
+    total: Number,
+  })
+);
