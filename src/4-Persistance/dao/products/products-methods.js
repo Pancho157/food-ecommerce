@@ -12,4 +12,12 @@ export default class ProductsMethodsTemplate {
   update(productInfo) {
     logger.error("Método PUT para productos ¡no imprelemtado!");
   }
+
+  removeStock(quantity) {
+    logger.error("Método REMOVESTOCK para productos ¡no imprelemtado!");
+  }
+
+  delete(id) {
+    logger.error("Método DELETE para productos ¡no imprelemtado!");
+  }
 }
