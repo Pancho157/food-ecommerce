@@ -1,7 +1,7 @@
 import * as mongoose from "mongoose";
 
 function connectToMongoAtlas() {
-  mongoose.connect(process.env.MONGO_URL, {
+  mongoose.connect(process.env.MONGO_ATLAS_URL, {
     // userNewUrlParser: true,
     // userUnifiedTopology: true,
   });
