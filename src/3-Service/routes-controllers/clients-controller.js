@@ -1,5 +1,6 @@
-import BBDDQuery from "../utils/db-queries.js";
-const DBQuery = new BBDDQuery();
+import ProductsQueries from "../db/queries/db-queries-products.js";
+
+const products = new ProductsQueries();
 
 class ClientsRoutesController {
   constructor() {
@@ -8,8 +9,8 @@ class ClientsRoutesController {
 
   //   GET
   getLandingPage(req, res) {
-    const products = DBQuery.getAllProducts();
-    res.render("landing-page", products);
+    const allProducts = products.getAll();
+    res.render("landing-page", allProducts);
   }
 
   //   POST

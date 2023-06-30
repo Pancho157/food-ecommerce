@@ -1,5 +1,12 @@
-import BBDDQuery from "../utils/db-queries.js";
-const DBQuery = new BBDDQuery();
+import IngredientsQueries from "../db/queries/db-queries-ingredients.js";
+import ProductsQueries from "../db/queries/db-queries-products.js";
+import PurchasesQueries from "../db/queries/db-queries-purchases.js";
+import UsersQueries from "../db/queries/db-queries-users.js";
+
+const ingredients = new IngredientsQueries();
+const products = new ProductsQueries();
+const purchases = new PurchasesQueries();
+const users = new UsersQueries();
 
 export class AdminRoutesController {
   constructor() {
@@ -14,31 +21,32 @@ export class AdminRoutesController {
   }
 
   getIngredientsPage(req, res) {
-    const ingredients = DBQuery.getAllIngredients();
+    const allIngredients = ingredients.getAll();
     res.render("admin-ingredients", {
       layout: "admin",
-      ingredients: ingredients,
+      ingredients: allIngredients,
     });
   }
 
   getProductsPage(req, res) {
-    const products = DBQuery.getAllProducts();
+    const products = products.getAll();
     res.render("admin-products", { layout: "admin", products: products });
   }
 
   getStadisticsPage(req, res) {
-    // const allPurchases = DBQuery.getPurchases(week);
+    const allPurchases = purchases.get("week");
     // let stadistics = allPurchases;
     // let bestSellingProducts = allPurchases;
 
     res.render("admin-stadistics", {
-      layout: "admin"
+      layout: "admin",
+      purchases: purchases,
     });
   }
 
   getProductInfo(req, res) {
     const productID = parseInt(req.body.prodID);
-    const productInfo = DBQuery.getProductInfo(productID);
+    const productInfo = products.get(productID);
 
     res.send(productInfo);
   }
@@ -47,7 +55,7 @@ export class AdminRoutesController {
     const user = req.body.user;
     const password = req.body.password;
 
-    const userExists = DBQuery.getUserInfo(user);
+    const userExists = users.get(user);
 
     if (userExists.name && userExists.password == password) {
       // TODO: Make token and save it on session storage
@@ -57,9 +65,7 @@ export class AdminRoutesController {
     }
   }
 
-  putProduct(req, res) {
-    
-  }
+  putProduct(req, res) {}
 }
 
 export default new AdminRoutesController();

@@ -1,11 +1,13 @@
+import logger from "../../../../logger/log4js-config.js";
+
 export default class ProductsQueries {
   static instance;
 
   constructor() {
-    if (BBDDQuery.instance) {
-      return BBDDQuery.instance;
+    if (ProductsQueries.instance) {
+      return ProductsQueries.instance;
     } else {
-      BBDDQuery.instance = this;
+      ProductsQueries.instance = this;
     }
   }
 

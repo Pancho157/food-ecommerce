@@ -1,3 +1,5 @@
+import logger from "../../../../logger/log4js-config.js";
+
 export default class IngredientsQueries {
   static instance;
 
