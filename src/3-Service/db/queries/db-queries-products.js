@@ -1,4 +1,5 @@
 import logger from "../../../../logger/log4js-config.js";
+import { productsModel } from "../models/mongoose-models.js";
 
 export default class ProductsQueries {
   static instance;
@@ -12,22 +13,38 @@ export default class ProductsQueries {
   }
 
   getAll() {
-    logger.error("Método GETAll para productos ¡no imprelemtado!");
+    return productsModel.find({});
   }
 
   get(id) {
-    logger.error("Método GET para productos ¡no imprelemtado!");
+    return productsModel.findById(id);
   }
 
-  update(productInfo) {
-    logger.error("Método PUT para productos ¡no imprelemtado!");
+  update(id, productInfo) {
+    return productsModel.findByIdAndUpdate(id, productInfo);
   }
 
-  removeStock(quantity) {
-    logger.error("Método REMOVESTOCK para productos ¡no imprelemtado!");
+  removeStock(id, decrementNumber = -1) {
+    if (decrementNumber > 0) {
+      decrementNumber = decrementNumber * -1;
+    }
+
+    return productsModel.findByIdAndUpdate(id, {
+      $inc: { quantity: decrementNumber },
+    });
+  }
+
+  addStock(id, incrementNumber = 1) {
+    if (incrementNumber < 0) {
+      incrementNumber = incrementNumber * -1;
+    }
+
+    return productsModel.findByIdAndUpdate(id, {
+      $inc: { quantity: incrementNumber },
+    });
   }
 
   delete(id) {
-    logger.error("Método DELETE para productos ¡no imprelemtado!");
+    return productsModel.findByIdAndDelete(id);
   }
 }

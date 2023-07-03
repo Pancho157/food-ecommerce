@@ -1,4 +1,5 @@
 import logger from "../../../../logger/log4js-config.js";
+import { salesModel } from "../models/mongoose-models.js";
 
 export default class PurchasesQueries {
   static instance;

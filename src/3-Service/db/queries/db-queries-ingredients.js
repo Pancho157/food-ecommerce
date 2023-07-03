@@ -1,4 +1,5 @@
 import logger from "../../../../logger/log4js-config.js";
+import { ingredientModel } from "../models/mongoose-models.js";
 
 export default class IngredientsQueries {
   static instance;
@@ -12,26 +13,39 @@ export default class IngredientsQueries {
   }
 
   getAll() {
-    logger.error("Método GET ALL para los ingredientes ¡no imprelemtado!");
+    // logger.error("Método GET ALL para los ingredientes ¡no imprelemtado!");
+    return ingredientModel.find({});
   }
 
   get(id) {
-    logger.error("Método GET para los ingredientes ¡no imprelemtado!");
+    return ingredientModel.findById(id);
   }
 
   create(data) {
-    logger.error("Método CREATE para los ingredientes ¡no imprelemtado!");
+    return ingredientModel.create(data);
   }
 
-  addStock(quantity) {
-    logger.error("Método ADDSTOCK para los ingredientes ¡no imprelemtado!");
+  removeStock(id, decrementNumber = -1) {
+    if (decrementNumber > 0) {
+      decrementNumber = decrementNumber * -1;
+    }
+
+    return ingredientModel.findByIdAndUpdate(id, {
+      $inc: { quantity: decrementNumber },
+    });
   }
 
-  removeStock(quantity) {
-    logger.error("Método REMOVESTOCK para los ingredientes ¡no imprelemtado!");
+  addStock(id, incrementNumber = 1) {
+    if (incrementNumber < 0) {
+      incrementNumber = incrementNumber * -1;
+    }
+
+    return ingredientModel.findByIdAndUpdate(id, {
+      $inc: { quantity: incrementNumber },
+    });
   }
 
   delete(id) {
-    logger.error("Método DELETE para los ingredientes ¡no imprelemtado!");
+    return ingredientModel.findByIdAndDelete(id);
   }
 }

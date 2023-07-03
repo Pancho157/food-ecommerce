@@ -1,20 +1,20 @@
 import mongoose from "mongoose";
 import { Schema } from "mongoose";
 
-export const productsModel = mongoose.model(
+const productsModel = mongoose.model(
   "products",
   new Schema({
     name: String,
     description: String,
     category: String,
     price: Number,
-    ingredients: [{ type: ObjectId, ref: "ingredients" }],
+    // ingredients: [{ type: ObjectId, ref: "ingredients" }],
     stock: Number,
     sales: [{}],
   })
 );
 
-export const ingredientModel = mongoose.model(
+const ingredientModel = mongoose.model(
   "ingredients",
   new Schema({
     name: String,
@@ -25,12 +25,15 @@ export const ingredientModel = mongoose.model(
   })
 );
 
-export const salesModel = mongoose.model(
+const salesModel = mongoose.model(
   "sales",
   new Schema({
     purchase: [
       {
-        product: { type: ObjectId, ref: "products" },
+        product: String,
+        description: String,
+        deliveryMethod: String,
+        deliveryDirection: String,
         price: Number, // at the time of purchase
         quantity: Number,
       },
@@ -38,3 +41,5 @@ export const salesModel = mongoose.model(
     total: Number,
   })
 );
+
+export { productsModel, ingredientModel, salesModel };

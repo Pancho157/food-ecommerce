@@ -12,7 +12,12 @@ import { engine } from "express-handlebars";
 import { clients } from "../2-Routes/clients-routes.js";
 import { admin } from "../2-Routes/admin-routes.js";
 
+// DB
+import connectToMongoAtlas from "../3-Service/db/connection/db-connection.js";
+
 let app = express();
+
+connectToMongoAtlas();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dir = path.dirname(__filename);

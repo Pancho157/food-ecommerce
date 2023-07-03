@@ -57,12 +57,12 @@
           <div class="menu--item">
           <div class="item">
             <p><span>{{name}}</span></p>
-            <p>({{ingredients}})</p>
+            <p>({{description}})</p>
           </div>
           <div class="item--counter">
-            <button type="button" class="counter--plus" onclick="add({{id}})">+</button>
+            <button type="button" class="counter--plus" onclick="add('{{id}}')">+</button>
             <input type="number" name="empanada-{{name}}" class="counter" min="0" value="0" step="1" data-prodID="{{id}}"/>
-            <button type="button" class="counter--less" onclick="removeOne({{id}})">-</button>
+            <button type="button" class="counter--less" onclick="removeOne('{{id}}')">-</button>
           </div>
         </div>
         {{/each}}   
@@ -78,12 +78,12 @@
           <div class="menu--item">
           <div class="item">
             <p><span>{{name}}</span></p>
-            <p>({{ingredients}})</p>
+            <p>({{description}})</p>
           </div>
           <div class="item--counter">
-            <button type="button" class="counter--plus" onclick="add({{id}})">+</button>
+            <button type="button" class="counter--plus" onclick="add('{{id}}')">+</button>
             <input type="number" name="pizza-{{name}}" class="counter" min="0" value="0" step="1" data-prodID="{{id}}"/>
-            <button type="button" class="counter--less" onclick="removeOne({{id}})">-</button>
+            <button type="button" class="counter--less" onclick="removeOne('{{id}}')">-</button>
           </div>
         </div>
         {{/each}}   
@@ -107,12 +107,12 @@
           <div class="menu--item">
           <div class="item">
             <p><span>{{name}}</span></p>
-            <p>({{ingredients}})</p>
+            <p>({{description}})</p>
           </div>
           <div class="item--counter">
-            <button type="button" class="counter--plus" onclick="add({{id}})">+</button>
+            <button type="button" class="counter--plus" onclick="add('{{id}}')">+</button>
             <input type="number" name="snack-{{name}}" class="counter" min="0" value="0" step="1" data-prodID="{{id}}"/>
-            <button type="button" class="counter--less" onclick="removeOne({{id}})">-</button>
+            <button type="button" class="counter--less" onclick="removeOne('{{id}}')">-</button>
           </div>
         </div>
         {{/each}}  
