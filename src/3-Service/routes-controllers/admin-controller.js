@@ -20,8 +20,11 @@ export class AdminRoutesController {
     res.render("admin-login", { layout: "admin" });
   }
 
-  getIngredientsPage(req, res) {
-    const allIngredients = ingredients.getAll();
+  async getIngredientsPage(req, res) {
+    const allIngredients = await ingredients.getAll();
+
+    console.log(allIngredients);
+
     res.render("admin-ingredients", {
       layout: "admin",
       ingredients: allIngredients,
