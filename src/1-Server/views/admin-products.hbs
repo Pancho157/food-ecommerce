@@ -41,27 +41,29 @@
           <th>Opciones</th>
         </tr>
       </thead>
-      <tr>
-        <td>Empanada de carne</td>
-        <td>Descripción random para el producto</td>
-        <td>
-          <button class="addStock">+</button>
-          <input type="number" name="" id="" value="0" />
-          <button class="removeStock">-</button>
-        </td>
-        <td class="price">1.200</td>
-        <td>
-          <button type="button">
-            <ion-icon name="alert-circle-outline"></ion-icon>
-          </button>
-          <button type="button">
-            <ion-icon name="build-outline"></ion-icon>
-          </button>
-          <button type="button" class="removeStock">
-            <ion-icon name="trash-outline"></ion-icon>
-          </button>
-        </td>
-      </tr>
+      {{#each empanadas}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{description}}</td>
+          <td>
+            <button class="addStock">+</button>
+            <input type="number" value="{{stock}}" />
+            <button class="removeStock">-</button>
+          </td>
+          <td class="price">{{price}}</td>
+          <td>
+            <button type="button">
+              <ion-icon name="alert-circle-outline"></ion-icon>
+            </button>
+            <button type="button">
+              <ion-icon name="build-outline"></ion-icon>
+            </button>
+            <button type="button">
+              <ion-icon name="trash-outline"></ion-icon>
+            </button>
+          </td>
+        </tr>
+      {{/each}}
     </table>
   </div>
 
@@ -77,27 +79,29 @@
           <th>Opciones</th>
         </tr>
       </thead>
-      <tr>
-        <td>Empanada de carne</td>
-        <td>Descripción random para el producto</td>
-        <td>
-          <button class="addStock">+</button>
-          <input type="number" name="" id="" value="0" />
-          <button class="removeStock">-</button>
-        </td>
-        <td class="price">1.200</td>
-        <td>
-          <button type="button">
-            <ion-icon name="alert-circle-outline"></ion-icon>
-          </button>
-          <button type="button">
-            <ion-icon name="build-outline"></ion-icon>
-          </button>
-          <button type="button" class="removeStock">
-            <ion-icon name="trash-outline"></ion-icon>
-          </button>
-        </td>
-      </tr>
+      {{#each pizzas}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{description}}</td>
+          <td>
+            <button class="addStock">+</button>
+            <input type="number" value="{{stock}}" />
+            <button class="removeStock">-</button>
+          </td>
+          <td class="price">{{price}}</td>
+          <td>
+            <button type="button">
+              <ion-icon name="alert-circle-outline"></ion-icon>
+            </button>
+            <button type="button">
+              <ion-icon name="build-outline"></ion-icon>
+            </button>
+            <button type="button">
+              <ion-icon name="trash-outline"></ion-icon>
+            </button>
+          </td>
+        </tr>
+      {{/each}}
     </table>
   </div>
 
@@ -113,27 +117,29 @@
           <th>Opciones</th>
         </tr>
       </thead>
-      <tr>
-        <td>Empanada de carne</td>
-        <td>Descripción random para el producto</td>
-        <td>
-          <button class="addStock">+</button>
-          <input type="number" name="" id="" value="0" />
-          <button class="removeStock">-</button>
-        </td>
-        <td class="price">1.200</td>
-        <td>
-          <button type="button">
-            <ion-icon name="alert-circle-outline"></ion-icon>
-          </button>
-          <button type="button">
-            <ion-icon name="build-outline"></ion-icon>
-          </button>
-          <button type="button" class="removeStock">
-            <ion-icon name="trash-outline"></ion-icon>
-          </button>
-        </td>
-      </tr>
+      {{#each snacks}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{description}}</td>
+          <td>
+            <button class="addStock">+</button>
+            <input type="number" value="{{stock}}" />
+            <button class="removeStock">-</button>
+          </td>
+          <td class="price">{{price}}</td>
+          <td>
+            <button type="button">
+              <ion-icon name="alert-circle-outline"></ion-icon>
+            </button>
+            <button type="button">
+              <ion-icon name="build-outline"></ion-icon>
+            </button>
+            <button type="button">
+              <ion-icon name="trash-outline"></ion-icon>
+            </button>
+          </td>
+        </tr>
+      {{/each}}
     </table>
   </div>
 
@@ -156,6 +162,7 @@
 <script src="/scrypts/table-sort.js"></script>
 <script src="/scrypts/open-close-modal.js"></script>
 <script src="/scrypts/modal-content.js"></script>
+<script src="/scrypts/modify-order.js"></script>
 
 <script
   type="module"

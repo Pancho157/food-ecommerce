@@ -28,9 +28,44 @@ export class AdminRoutesController {
     });
   }
 
-  getProductsPage(req, res) {
-    const products = products.getAll();
-    res.render("admin-products", { layout: "admin", products: products });
+  async getProductsPage(req, res) {
+    const allProducts = await products.getAll();
+    const productsByCategory = { empanadas: [], pizzas: [], snacks: [] };
+
+    allProducts.forEach((product) => {
+      if (product.category == "empanadas") {
+        productsByCategory.empanadas.push({
+          name: product.name,
+          description: product.description,
+          price: product.price,
+          stock: product.stock,
+          id: product._id.toHexString(),
+        });
+      } else if (product.category == "pizzas") {
+        productsByCategory.pizzas.push({
+          name: product.name,
+          description: product.description,
+          price: product.price,
+          stock: product.stock,
+          id: product._id.toHexString(),
+        });
+      } else if (product.category == "snacks") {
+        productsByCategory.snacks.push({
+          name: product.name,
+          description: product.description,
+          price: product.price,
+          stock: product.stock,
+          id: product._id.toHexString(),
+        });
+      }
+    });
+
+    res.render("admin-products", {
+      layout: "admin",
+      empanadas: productsByCategory.empanadas,
+      pizzas: productsByCategory.pizzas,
+      snacks: productsByCategory.snacks,
+    });
   }
 
   getStadisticsPage(req, res) {

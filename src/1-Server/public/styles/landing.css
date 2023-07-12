@@ -39,8 +39,9 @@
 
 .hero--brand {
   width: 360px;
-  height: 160px;
-  background-color: var(--secondary-bg);
+  height: 200px;
+  background-image: url("../images/logo.png");
+  background-size: cover;
   border: 1px solid var(--gray);
   border-radius: 16px;
 
