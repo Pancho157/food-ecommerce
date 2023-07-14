@@ -13,7 +13,6 @@ export default class IngredientsQueries {
   }
 
   getAll() {
-    // logger.error("Método GET ALL para los ingredientes ¡no imprelemtado!");
     return ingredientModel.find({});
   }
 

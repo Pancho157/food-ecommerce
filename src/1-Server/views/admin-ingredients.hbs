@@ -42,126 +42,37 @@
           <th>Unidad</th>
         </tr>
       </thead>
-      <tr>
-        <td>Carne molida</td>
-        <td>Comprada en x lado - Descuento al por mayor en tal otro lado</td>
-        <td>
-          <button class="addStock">+</button>
-          <input type="number" name="" id="" value="0" />
-          <button class="removeStock">-</button>
-        </td>
-        <td class="price">1600</td>
-        <td>
-          <button type="button" onclick="displayInfoModal(1)">
-            <ion-icon name="alert-circle-outline"></ion-icon>
-          </button>
-          <button
-            type="button"
-            onclick="displayChangeIngredientPropertiesModal(1)"
-          >
-            <ion-icon name="build-outline"></ion-icon>
-          </button>
-          <button
-            type="button"
-            class="removeStock"
-            onclick="displayDeleteIngredientModal(1)"
-          >
-            <ion-icon name="trash-outline"></ion-icon>
-          </button>
-        </td>
-        <td>Kg</td>
-      </tr>
-
-      <tr>
-        <td>Tapas de empanadas</td>
-        <td>Comprada en x lado - Descuento al por mayor en tal otro lado</td>
-        <td>
-          <button class="addStock">+</button>
-          <input type="number" name="" id="" value="0" />
-          <button class="removeStock">-</button>
-        </td>
-        <td class="price">300</td>
-        <td>
-          <button type="button" onclick="displayInfoModal(2)">
-            <ion-icon name="alert-circle-outline"></ion-icon>
-          </button>
-          <button
-            type="button"
-            onclick="displayChangeIngredientPropertiesModal(2)"
-          >
-            <ion-icon name="build-outline"></ion-icon>
-          </button>
-          <button
-            type="button"
-            class="removeStock"
-            onclick="displayDeleteIngredientModal(2)"
-          >
-            <ion-icon name="trash-outline"></ion-icon>
-          </button>
-        </td>
-        <td>U.</td>
-      </tr>
-
-      <tr>
-        <td>Lechuga</td>
-        <td>Comprada en x lado</td>
-        <td>
-          <button class="addStock">+</button>
-          <input type="number" name="" id="" value="0" />
-          <button class="removeStock">-</button>
-        </td>
-        <td class="price">200</td>
-        <td>
-          <button type="button" onclick="displayInfoModal(3)">
-            <ion-icon name="alert-circle-outline"></ion-icon>
-          </button>
-          <button
-            type="button"
-            onclick="displayChangeIngredientPropertiesModal(3)"
-          >
-            <ion-icon name="build-outline"></ion-icon>
-          </button>
-          <button
-            type="button"
-            class="removeStock"
-            onclick="displayDeleteIngredientModal(3)"
-          >
-            <ion-icon name="trash-outline"></ion-icon>
-          </button>
-        </td>
-        <td>U.</td>
-      </tr>
-
-      <tr>
-        <td>Cebolla</td>
-        <td>La bolsa está barata en la feria (sábados a la mañana)</td>
-        <td>
-          <button class="addStock">+</button>
-          <input type="number" name="" id="" value="0" />
-          <button class="removeStock">-</button>
-        </td>
-        <td class="price">150</td>
-        <td>
-          <button type="button" onclick="displayInfoModal(4)">
-            <ion-icon name="alert-circle-outline"></ion-icon>
-          </button>
-          <button
-            type="button"
-            onclick="displayChangeIngredientPropertiesModal(4)"
-          >
-            <ion-icon name="build-outline"></ion-icon>
-          </button>
-          <button
-            type="button"
-            class="removeStock"
-            onclick="displayDeleteIngredientModal(4)"
-          >
-            <ion-icon name="trash-outline"></ion-icon>
-          </button>
-        </td>
-        <td>Kg</td>
-      </tr>
-
+      {{#each ingredient}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{description}}</td>
+          <td>
+            <button class="addStock">+</button>
+            <input type="number" name="" id="" value="{{stock}}" />
+            <button class="removeStock">-</button>
+          </td>
+          <td class="price">{{price}}</td>
+          <td>
+            <button type="button" onclick="displayInfoModal(1)">
+              <ion-icon name="alert-circle-outline"></ion-icon>
+            </button>
+            <button
+              type="button"
+              onclick="displayChangeIngredientPropertiesModal(1)"
+            >
+              <ion-icon name="build-outline"></ion-icon>
+            </button>
+            <button
+              type="button"
+              class="removeStock"
+              onclick="displayDeleteIngredientModal(1)"
+            >
+              <ion-icon name="trash-outline"></ion-icon>
+            </button>
+          </td>
+          <td>{{stockUnit}}</td>
+        </tr>
+      {{/each}}
     </table>
   </div>
 
@@ -178,6 +89,7 @@
 <script src="/scrypts/table-sort.js"></script>
 <script src="/scrypts/open-close-modal.js"></script>
 <script src="/scrypts/modal-content.js"></script>
+<script src="/scrypts/modify-order.js"></script>
 
 <script
   type="module"

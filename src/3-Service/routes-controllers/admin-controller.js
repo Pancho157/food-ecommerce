@@ -22,12 +22,20 @@ export class AdminRoutesController {
 
   async getIngredientsPage(req, res) {
     const allIngredients = await ingredients.getAll();
-
-    console.log(allIngredients);
+    const dtoIngredients = allIngredients.map((ingredient) => {
+      return {
+        id: ingredient._id.toHexString(),
+        name: ingredient.name,
+        description: ingredient.description,
+        price: ingredient.price,
+        stock: ingredient.stock,
+        stockUnit: ingredient.stockUnit,
+      };
+    });
 
     res.render("admin-ingredients", {
       layout: "admin",
-      ingredients: allIngredients,
+      ingredient: dtoIngredients,
     });
   }
 
