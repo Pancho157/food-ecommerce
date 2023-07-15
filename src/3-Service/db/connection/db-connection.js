@@ -1,10 +1,13 @@
 import * as mongoose from "mongoose";
 
-function connectToMongoAtlas() {
-  mongoose.connect(process.env.MONGO_ATLAS_URL, {
-    // userNewUrlParser: true,
-    // userUnifiedTopology: true,
-  });
+async function connectToMongoAtlas() {
+  await mongoose.connect(
+    `mongodb+srv://${process.env.MONGO_ATLAS_USERNAME}:${process.env.MONGO_ATLAS_PASS}@${process.env.MONGO_ATLAS_CLUSTER}.mongodb.net/?retryWrites=true&w=majority`,
+    {
+      // userNewUrlParser: true,
+      // userUnifiedTopology: true,
+    }
+  );
 }
 
 // To not follow schemas

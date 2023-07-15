@@ -17,7 +17,7 @@ import connectToMongoAtlas from "../3-Service/db/connection/db-connection.js";
 
 let app = express();
 
-connectToMongoAtlas();
+await connectToMongoAtlas();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dir = path.dirname(__filename);
