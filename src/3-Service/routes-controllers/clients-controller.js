@@ -40,7 +40,7 @@ class ClientsRoutesController {
           });
         }
       });
-      
+
       res.render("landing-page", productsByCategory);
     } catch (err) {
       logger.error(err);
@@ -49,7 +49,33 @@ class ClientsRoutesController {
 
   //   POST
   postPurchase(req, res) {
-    const purchaseOrder = req.body;
+    const shopOpenHour = 20,
+      shopClosingHour = 1,
+      tuesday = 2;
+
+    var date = new Date(),
+      day = date.getDay(),
+      hours = date.getHours();
+
+    if (day != tuesday && (shopOpenHour <= hours || hours <= shopClosingHour)) {
+      const purchase = req.body;
+
+      if ("name" in purchase && purchase.products.lenght !== 0) {
+        const purchaseOrder = {
+          buyer: purchase.name,
+          products: purchase.products,
+          date: new Date(),
+          status: "preparing",
+        };
+
+        purchases.create(purchaseOrder);
+        res.status(200).send(`Orden confirmada a nombre de ${purchase.name}`);
+      } else {
+        res.status(401).send("No se ingresaron productos o comprador");
+      }
+    } else {
+      res.status(401).send("Closed");
+    }
   }
 }
 

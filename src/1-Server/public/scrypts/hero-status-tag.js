@@ -21,17 +21,16 @@ function verifyAndRenderShopStatus() {
   var date = new Date(),
     day = date.getDay(),
     hours = date.getHours();
+  const tuesday = 2;
 
   renderShopStatusOnStatusTag("closed");
 
   //if open, replaces closed tag
-  if (day != 2) {
-    if (shopOpenHour <= hours || hours <= shopClosingHour) {
-      if (hours <= shopClosingHour) {
-        renderShopStatusOnStatusTag("closing soon");
-      } else {
-        renderShopStatusOnStatusTag("open");
-      }
+  if (day != tuesday && (shopOpenHour <= hours || hours <= shopClosingHour)) {
+    if (hours <= shopClosingHour) {
+      renderShopStatusOnStatusTag("closing soon");
+    } else {
+      renderShopStatusOnStatusTag("open");
     }
   }
 }
