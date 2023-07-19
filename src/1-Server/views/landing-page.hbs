@@ -120,7 +120,18 @@
       </div>
     </div>
 
-    <button type="submit" class="form--submitButton">Hacer pedido</button>
+    <button type="button" onclick="openModal()" class="form--submitButton">Realizar pedido</button>
+
+    <div class="modal">
+      <h2>Ya casi terminamos!</h2>
+      <p>Ingresa el nombre de la persona que retirará el pedido</p>
+      <input type="text" name="name" required>
+
+      <div class="modal-buttons">
+        <button type="submit" class="modal__submit">Confirmar pedido</button>
+        <button type="button" onclick="closeModal()" class="modal__modify">Modificar</button>
+      </div>
+    </div>
   </form>
 
   {{! Fin menus }}
@@ -178,3 +189,4 @@
     <script src="/scrypts/hero-status-tag.js"></script>
     <script src="/scrypts/slider.js"></script>
     <script src="/scrypts/modify-order.js"></script>
+    <script src="/scrypts/open-close-modal.js"></script>

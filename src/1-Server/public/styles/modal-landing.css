@@ -1,0 +1,66 @@
+.hidden {
+  display: none !important;
+}
+
+.modal {
+  width: 450px;
+  height: 200px;
+
+  background-color: #3f3f3f;
+  border: 2px solid #fff;
+  border-radius: 16px;
+  padding: 16px;
+  z-index: 200000;
+
+  position: fixed;
+  left: calc(50% - 250px);
+  top: 60px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.modal h2,
+.modal p {
+  color: #fff;
+  text-align: center;
+}
+
+.modal > input {
+  height: 30px;
+  border-radius: 4px;
+  padding-left: 16px;
+}
+
+.modal .modal__modify {
+  padding: 4px 16px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+
+  float: right;
+  margin-right: 20px;
+  transition: all 300ms;
+}
+
+.modal .modal__submit {
+  padding: 4px 16px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  background-color: var(--buy-button);
+  cursor: pointer;
+
+  float: right;
+  margin-right: 20px;
+  transition: all 300ms;
+}
+
+.modal .modal__submit:hover {
+  box-shadow: -2px -2px #fff inset;
+  color: #fff;
+}
+
+.modal .modal__modify:hover {
+  box-shadow: -2px -2px #333 inset;
+}

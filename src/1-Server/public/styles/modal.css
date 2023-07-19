@@ -13,7 +13,7 @@
   padding: 16px;
   z-index: 200000;
 
-  position: absolute;
+  position: fixed;
   left: calc(50% - 250px);
   top: 60px;
 
