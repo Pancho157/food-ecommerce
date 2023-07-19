@@ -1,4 +1,4 @@
-function displayInfoModal(prodId) {
+function displayInfoModal(id) {
   const modal = document.querySelector(".modal");
   modal.innerHTML = "";
 
@@ -60,7 +60,7 @@ function displayInfoModal(prodId) {
   openModal();
 }
 
-function displayChangeIngredientPropertiesModal(prodId) {
+function displayChangeIngredientPropertiesModal(id) {
   const modal = document.querySelector(".modal");
   modal.innerHTML = "";
 

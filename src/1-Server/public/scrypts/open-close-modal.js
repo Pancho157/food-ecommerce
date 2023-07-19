@@ -1,9 +1,9 @@
 function closeModal() {
-  const modalContainer = document.querySelector(".modal--container");
-  modalContainer.className = "modal--container hidden";
+  const modalContainer = document.querySelector(".modal");
+  modalContainer.className = "modal hidden";
 }
 
 function openModal() {
-  const modalContainer = document.querySelector(".modal--container");
-  modalContainer.className = "modal--container";
+  const modalContainer = document.querySelector(".modal");
+  modalContainer.className = "modal";
 }
