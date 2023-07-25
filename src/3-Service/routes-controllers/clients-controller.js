@@ -57,6 +57,8 @@ class ClientsRoutesController {
       day = date.getDay(),
       hours = date.getHours();
 
+    console.log(req.body);
+
     if (day != tuesday && (shopOpenHour <= hours || hours <= shopClosingHour)) {
       const purchase = req.body;
 
