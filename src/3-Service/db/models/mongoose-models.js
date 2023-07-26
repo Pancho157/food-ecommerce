@@ -11,6 +11,7 @@ const productsModel = mongoose.model(
     // ingredients: [{ type: ObjectId, ref: "ingredients" }],
     stock: Number,
     sales: [{}],
+    prodCode: String,
   })
 );
 

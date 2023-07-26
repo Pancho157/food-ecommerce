@@ -22,24 +22,26 @@ class ClientsRoutesController {
             name: product.name,
             description: product.description,
             price: product.price,
-            id: product._id.toHexString(),
+            prodCode: product.prodCode,
           });
         } else if (product.category == "pizzas") {
           productsByCategory.pizzas.push({
             name: product.name,
             description: product.description,
             price: product.price,
-            id: product._id.toHexString(),
+            prodCode: product.prodCode,
           });
         } else if (product.category == "snacks") {
           productsByCategory.snacks.push({
             name: product.name,
             description: product.description,
             price: product.price,
-            id: product._id.toHexString(),
+            prodCode: product.prodCode,
           });
         }
       });
+
+      console.log(productsByCategory);
 
       res.render("landing-page", productsByCategory);
     } catch (err) {
